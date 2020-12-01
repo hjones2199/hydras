@@ -2,8 +2,7 @@
 
 let
   pkgs = (import <nixpkgs> {});
-  ush = (import ush {});
 in
 {
-   ushbuild = ush;
+  ushbuild = pkgs.callPackage ush { };
 }
